@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace SimpleView
 {
@@ -12,6 +7,11 @@ namespace SimpleView
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void SegControl_OnValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            infoLabel.Text = $"Selected #{SegControl.SelectedSegment+1} Tab!";
         }
     }
 }

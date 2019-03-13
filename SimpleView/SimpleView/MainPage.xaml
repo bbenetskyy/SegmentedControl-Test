@@ -2,13 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SimpleView"
+             xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
              x:Class="SimpleView.MainPage">
-
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+        <controls:SegmentedControl x:Name="SegControl" TintColor="#007AFF" SelectedSegment="0" Margin="20" ValueChanged="SegControl_OnValueChanged">
+            <controls:SegmentedControl.Children>
+                <controls:SegmentedControlOption Text="Tab 1" />
+                <controls:SegmentedControlOption Text="Tab 2" />
+                <controls:SegmentedControlOption Text="Tab 3" />
+                <controls:SegmentedControlOption Text="Tab 4" />
+            </controls:SegmentedControl.Children>
+        </controls:SegmentedControl>
+        <StackLayout x:Name="SegContent">
+            <Label x:Name="infoLabel" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        </StackLayout>
 </ContentPage>

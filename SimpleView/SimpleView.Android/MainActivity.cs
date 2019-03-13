@@ -1,11 +1,8 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using SegmentedControl.FormsPlugin.Android;
 
 namespace SimpleView.Droid
 {
@@ -19,6 +16,7 @@ namespace SimpleView.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            SegmentedControlRenderer.Init();
             LoadApplication(new App());
         }
     }
